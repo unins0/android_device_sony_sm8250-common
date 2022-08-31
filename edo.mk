@@ -339,7 +339,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0-service.multihal
+    android.hardware.sensors-service.multihal
 
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
