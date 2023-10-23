@@ -191,7 +191,7 @@ sh_binary {
 }
 
 sh_binary {
-    name: "init.qcom.msim.sh",
-    src: "bin/init.qcom.msim.sh",
+    name: "init.sony.sh",
+    src: "bin/init.sony.sh",
     device_specific: true,
 }
