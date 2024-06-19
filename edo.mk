@@ -114,6 +114,7 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    libaudioroute.vendor \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
@@ -128,7 +129,8 @@ PRODUCT_PACKAGES += \
     audio.primary.kona \
     audio.r_submix.default \
     audio.usb.default \
-    sound_trigger.primary.kona
+    sound_trigger.primary.kona \
+    libprocessgroup.vendor
 
 PRODUCT_PACKAGES += \
     liba2dpoffload \
