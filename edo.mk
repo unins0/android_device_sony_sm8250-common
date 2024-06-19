@@ -114,6 +114,7 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    libaudioroute.vendor \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
@@ -128,7 +129,8 @@ PRODUCT_PACKAGES += \
     audio.primary.kona \
     audio.r_submix.default \
     audio.usb.default \
-    sound_trigger.primary.kona
+    sound_trigger.primary.kona \
+    libprocessgroup.vendor
 
 PRODUCT_PACKAGES += \
     liba2dpoffload \
@@ -286,6 +288,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles_kona.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_kona.xml \
     $(LOCAL_PATH)/configs/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_ODM)/etc/media_profiles_V1_0.xml \
     $(LOCAL_PATH)/configs/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
+
+$(call soong_config_set,stagefright,target_disable_thumbnail_block_model,true)
 
 # Light
 PRODUCT_PACKAGES += \
