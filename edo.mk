@@ -20,6 +20,10 @@ $(call inherit-product, vendor/sony/sm8250-common/sm8250-common-vendor.mk)
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
+
+# Rules
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
+
 # VNDK
 BOARD_SHIPPING_API_LEVEL := 29
 PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
