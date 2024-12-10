@@ -412,16 +412,30 @@ PRODUCT_PACKAGES += \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
 
+# Xperia Modules
+$(call inherit-product, hardware/sony/XperiaModules.mk)
+
 # Extras
 $(call inherit-product, vendor/sony/extra/extra.mk)
+
+# Xperia Modules - Flags
+TARGET_SUPPORTS_CREATOR_MODE := true
+TARGET_SUPPORTS_HIGH_POLLING_RATE := true
+TARGET_SUPPORTS_SOUND_ENHANCEMENT_DTS := false
+TARGET_SUPPORTS_EUICC := false
 
 # Extras - Flags
 TARGET_SHIPS_SONY_CAMERA := true
 TARGET_SHIPS_SONY_APPS := false
+TARGET_SHIPS_SIDESENSE := false
+TARGET_SHIPS_STAMINA := true
 TARGET_SUPPORTS_GAME_CONTROLLERS := false
 
 # Extras and XperiaModules Combined
 TARGET_SUPPORTS_SOUND_ENHANCEMENT := false
 TARGET_SHIPS_SOUND_ENHANCEMENT := false
+
+# Xperia Modules
+$(call inherit-product, hardware/sony/XperiaModules.mk)
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
