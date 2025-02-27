@@ -278,13 +278,8 @@ PRODUCT_PACKAGES += \
     libipanat \
     liboffloadhal
 
-# Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
-
-$(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/power_supply/battery_ext/smart_charging_interruption)
-$(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
-$(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
+# Kernel
+PRODUCT_ENABLE_UFFD_GC := true
 
 # Media
 PRODUCT_COPY_FILES += \
