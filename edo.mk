@@ -256,6 +256,9 @@ PRODUCT_PACKAGES += \
     FM2 \
     qcom.fmradio
 
+# Graphics
+$(call soong_config_set,EGL,USE_DISPLAY_ARRAY,true)
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \
