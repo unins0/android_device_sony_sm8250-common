@@ -246,6 +246,8 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,EGL,USE_DISPLAY_ARRAY,true)
 
+$(call soong_config_set,qtidisplay,target_no_raw10_custom_format,true)
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
