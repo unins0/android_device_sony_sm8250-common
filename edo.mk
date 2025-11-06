@@ -118,7 +118,6 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    libaudioroute.vendor \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
@@ -132,8 +131,7 @@ PRODUCT_PACKAGES += \
     audio.primary.kona \
     audio.r_submix.default \
     audio.usb.default \
-    sound_trigger.primary.kona \
-    libprocessgroup.vendor
+    sound_trigger.primary.kona
 
 PRODUCT_PACKAGES += \
     liba2dpoffload \
@@ -298,30 +296,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_ODM)/etc/media_profiles_V1_0.xml \
     $(LOCAL_PATH)/configs/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
 
-<<<<<<< HEAD
 $(call soong_config_set,stagefright,target_disable_thumbnail_block_model,true)
-=======
-PRODUCT_PACKAGES += \
-    android.hardware.media.omx@1.0-service \
-    init.qti.media.sh \
-    libavservices_minijail \
-    libavservices_minijail.vendor \
-    libavservices_minijail_vendor \
-    libc2dcolorconvert \
-    libcodec2_hidl@1.0.vendor \
-    libcodec2_vndk.vendor \
-    libstagefright_softomx_plugin.vendor \
-    libmm-omxcore \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxCore \
-    libOmxEvrcEnc \
-    libOmxG711Enc \
-    libOmxQcelp13Enc \
-    libOmxVdec \
-    libOmxVenc \
-    libstagefrighthw
->>>>>>> 67533bf (sm8250-common: Build some VNDK libraries)
 
 # Light
 PRODUCT_PACKAGES += \
