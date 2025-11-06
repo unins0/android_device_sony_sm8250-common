@@ -291,10 +291,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.sony_edo
 
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay-service.sony
-
 # NFC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
@@ -416,9 +412,13 @@ PRODUCT_PACKAGES += \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
 
-# XperiaParts
-PRODUCT_PACKAGES += \
-    XperiaParts
+# Extras
+$(call inherit-product, vendor/sony/extra/extra.mk)
+
+# Extras - Flags
+TARGET_SHIPS_SONY_CAMERA := true
+TARGET_SHIPS_SONY_APPS := false
+TARGET_SUPPORTS_GAME_CONTROLLERS := false
 
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
