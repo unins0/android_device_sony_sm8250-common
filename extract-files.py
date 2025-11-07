@@ -107,11 +107,8 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .add_needed('libcrypto_shim.so'),
     (
-        'vendor/lib64/libsomc_camerahal.so',
-        'vendor/lib64/libsomc_chokoballcmn.so',
         'vendor/etc/msm_irqbalance.conf',
     ): blob_fixup()
-        .replace_needed('libui.so', 'libui-v34.so'),
         .regex_replace('IGNORED_IRQ=27,23,38$', 'IGNORED_IRQ=27,23,38,115,332'),
 }  # fmt: skip
 
