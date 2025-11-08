@@ -413,13 +413,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
-# WiFi Display
-PRODUCT_PACKAGES += \
-    android.media.audio.common.types-V2-cpp \
-    libnl \
-    libpng.vendor \
-    libwfdaac_vendor
-
 # WiFi firmware symlinks
 PRODUCT_PACKAGES += \
     firmware_wlanmdsp.otaupdate_symlink \
