@@ -54,6 +54,7 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.hardware.fm@1.0',
         'vendor.qti.hardware.qseecom@1.0',
         'vendor.qti.hardware.tui_comm@1.0',
+        'vendor.qti.hardware.wifidisplaysession@1.0',
         'vendor.qti.ims.callinfo@1.0',
         'vendor.qti.ims.rcsconfig@1.0',
         'vendor.qti.ims.rcsconfig@1.1',
@@ -62,6 +63,24 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    (
+        'system_ext/bin/wfdservice',
+    ): blob_fixup()
+        .add_needed('libwfdservice_shim.so'),
+    (
+        'system_ext/lib/libwfdmmsrc_system.so',
+    ): blob_fixup()
+        .add_needed('libgui_shim.so'),
+    (
+        'system_ext/lib/libwfdservice.so',
+    ): blob_fixup()
+        .replace_needed('android.media.audio.common.types-V3-cpp.so', 'android.media.audio.common.types-V4-cpp.so'),
+    (
+        'system_ext/lib64/libwfdnative.so',
+    ): blob_fixup()
+        .replace_needed('android.hidl.base@1.0.so', 'libhidlbase.so')
+        .add_needed('libbinder_shim.so')
+        .add_needed('libinput_shim.so'),
     (
         'vendor/lib64/libvpplibrary.so',
         'vendor/lib64/libswiqisettinghelper.so',
