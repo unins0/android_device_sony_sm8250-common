@@ -426,7 +426,7 @@ $(call inherit-product, vendor/sony/extra/extra.mk)
 # Xperia Modules - Flags
 TARGET_SUPPORTS_BATTERY_CARE := true
 TARGET_SUPPORTS_CREATOR_MODE := true
-TARGET_SUPPORTS_HIGH_POLLING_RATE := true
+TARGET_SUPPORTS_HIGH_POLLING_RATE := false
 
 # Extras - Flags
 TARGET_SHIPS_SONY_CAMERA := true
