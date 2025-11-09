@@ -334,13 +334,6 @@ $(call soong_config_set,qtipower,mode_ext_lib,//$(LOCAL_PATH):libpowermode-ext-s
 PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti.vendor # Needed by CNE app
 
-# QTI Components
-TARGET_BOARD_PLATFORM := kona
-TARGET_COMMON_QTI_COMPONENTS := \
-    alarm \
-    av \
-    wfd
-
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio-service.compat \
@@ -415,11 +408,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 # WiFi Display
-PRODUCT_PACKAGES += \
-    android.media.audio.common.types-V2-cpp \
-    libnl \
-    libwfdaac_vendor
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-wfd.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-wfd.xml
 
